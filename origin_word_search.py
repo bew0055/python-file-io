@@ -2,9 +2,14 @@
 
 # Words to look for: inherit, inheritance, heritable, and other forms of these words - including both upper and lower case
 
-
 import re
 import sys
+
+# r' - used so backslashes indicate a special character
+# (?i) - indicates the regex search will be case insensitive 
+# .. - matches any character for two characters
+# herit - the literal characters herit
+# \w+ - matches one or more word characters afetr herit
 
 s = r'(?i)..herit\w+'
 o = re.compile(s)
