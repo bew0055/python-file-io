@@ -5,11 +5,11 @@
 import re
 import sys
 
-# r' - used so backslashes indicate a special character
+# r'' - used so backslashes indicate a special character
 # (?i) - indicates the regex search will be case insensitive 
 # .. - matches any character for two characters
 # herit - the literal characters herit
-# \w+ - matches one or more word characters afetr herit
+# \w+ - matches one or more word characters after herit
 
 s = r'(?i)..herit\w+'
 o = re.compile(s)
@@ -27,6 +27,6 @@ with open('origin.txt', 'r') as in_stream:
 				print(word_line, "\t", word.group(), file = out_stream)
 			word_line += 1
 print("done")
-print('origin.txt is closed?', in_stream.closed)
-print('found_words.txt is closed?', out_stream.closed)
+print('origin.txt has been closed', in_stream.closed)
+print('found_words.txt has been closed', out_stream.closed)
 
